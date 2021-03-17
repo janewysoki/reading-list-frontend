@@ -5,13 +5,6 @@ import {fetchReadingLists} from './actions/fetchReadingLists'
 
 class App extends React.Component {
 
-
-  componentDidMount() {
-    this.props.fetchReadingLists({type: 'FETCH_READING_LISTS', payload: {name: 'Early Education'}})
-  }
-
-
-
   render() {
     return (
       <div className="App">
@@ -24,5 +17,5 @@ class App extends React.Component {
 
 //fetchReadingLists is action creator that gives us ability to update our store directly from this component 
 //gives us access to this.props.fetchReadingLists()
-//connect is giving us access to store.dispatch({type, payload})
-export default connect(null, {fetchReadingLists})(App);
+//connect runs store.dispatch({type, payload}) for us so we don't hard code it?
+export default connect()(App);
