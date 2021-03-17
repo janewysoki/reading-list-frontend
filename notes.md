@@ -52,3 +52,20 @@ export default function readingListReducer(state = {readingLists: []}, action) {
 App.js
 <!-- connect runs store.dispatch({type, payload}) for us so we don't hard code it? -->
 export default connect(null, {fetchReadingLists})(App);
+
+
+export default function readingListReducer(state = {reading_lists: []}, action) {
+    
+    //this is just to see that our action was coming in correctly and that the store could properly be updated by our reducer
+    return action.payload
+
+
+}
+
+fetchReadingLists.js
+<!-- action creators typically before you incorporate a fetch request or any type of async reqiuest return regular JS objects that have a type and payload -->
+{type: 'asdf', payload: }
+<!-- then once an action creator retusn something like this our the connect function in  ReadingListsContainer pispatched whatever that action is to our reducer for us -->
+since fetch request takes time, we can't return that action right away and we ont want our connect function to auto call dipatch for us. we instead use it inside our action creator so we can call dispatch ____;
+
+thunk allows us to use dispatch inside action creators

@@ -2,17 +2,36 @@
 //typivally class components cause they may need state
 //this is a top level component so we'd want to render it inside our App in App.js which is why we export it below
 import React from 'react'
+import {connect} from 'react-redux'
+import {fetchReadingLists} from '../actions/fetchReadingLists'
+import ReadingLists from '../components/ReadingLists'
+import ReadingListInput from '../components/ReadingListInput'
+
 
 class ReadingListsContainer extends React.Component {
 
+    componentDidMount() {
+        this.props.fetchReadingLists()
+    }
+ 
     render() {
         return(
             <div>
-                ReadingListsContainer
+                <ReadingListInput/>
+                <ReadingLists />
             </div>
         )
     }
 
 }
 
-export default ReadingListsContainer;
+//state here is state from our redux store
+const mapStateToProps = state => {
+    return {
+        reading_lists: state.reading_lists
+    }
+         
+}
+
+
+export default connect(mapStateToProps, {fetchReadingLists})(ReadingListsContainer);

@@ -11,3 +11,5 @@ class ReadingListInput extends React.Component {
         )
     }
 }
+
+export default ReadingListInput;
