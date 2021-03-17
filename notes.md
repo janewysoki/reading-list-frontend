@@ -14,3 +14,7 @@ componentDidMount() {
 
 
 #first checks serializers before models. serializer knows when you render json to first check serializer to send to frontend?
+
+
+container components are still components, usually class componnets and usually render other components and contain other components
+containers are kind of a parent to the other components 
