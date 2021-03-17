@@ -1,14 +1,15 @@
 
 import React from 'react';
 import {connect} from 'react-redux'
-import {fetchReadingLists} from './actions/fetchReadingLists'
+//import {fetchReadingLists} from './actions/fetchReadingLists'
+import ReadingListsContainer from './containers/ReadingListsContainer'
 
 class App extends React.Component {
 
   render() {
     return (
       <div className="App">
-        App
+          <ReadingListsContainer/>
       </div>
     );
   }
