@@ -1,11 +1,14 @@
 import React from 'react'
+import BookInput from '../components/BookInput'
+import Books from '../components/Books'
 
 class BooksContainer extends React.Component {
 
-    render(){
+    render() {
         return (
             <div>
-                BooksContainer
+                <BookInput/>
+                <Books books={this.props.reading_list && this.props.reading_list.books}/>
             </div>
         )
     }

@@ -97,3 +97,15 @@ ReactDOM.render(
 ReadingListContainer.js
 <!-- Switch in will choose first route that matches that path; 
 the order of the routes matters-->
+
+
+BooksContainer.js
+<!-- if this.props.reading_list exists, then render this.props.reading_list.books. otherwise this.props.reading_list comes up as undefined the first time it's rednered and you can't call .books on undefined -->
+ render() {
+        return (
+            <div>
+                <BookInput/>
+                <Books books={this.props.reading_list && this.props.reading_list.books}/>
+            </div>
+        )
+    }
