@@ -4,7 +4,7 @@ import { createStore, applyMiddleware, compose } from 'redux'; //need to set up 
 import thunk from 'redux-thunk'; //returns function from action creator which benefits us because____; for when we need to make async reqiests
 import { Provider } from 'react-redux'; //this wraps our app and gives it access to store
 import readingListReducer from './reducers/readingListReducer'
-
+import {BrowserRouter as Router} from 'react-router-dom'
 import App from './App';
 
 
@@ -21,9 +21,12 @@ let store = createStore(readingListReducer, composeEnhancers(applyMiddleware(thu
 
 //below we wrap App with Provider so that the store is global to any component we create?
 //any child of our App component will have access to the store that we have to pass into provider
+//router gives app and andy child of app access to ruote and setting up links
 ReactDOM.render(
 <Provider store={store}>
-  <App />
+  <Router>
+    <App />
+  </Router>
 </Provider>
 , 
 

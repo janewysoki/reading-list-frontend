@@ -83,3 +83,13 @@ const ReadingLists = (props) => {
 }
 
 
+index.js
+<!-- //below we wrap App with Provider so that the store is global to any component we create?
+//any child of our App component will have access to the store that we have to pass into provider
+//router gives app and andy child of app access to ruote and setting up links -->
+ReactDOM.render(
+<Provider store={store}>
+  <Router>
+    <App />
+  </Router>
+</Provider>
