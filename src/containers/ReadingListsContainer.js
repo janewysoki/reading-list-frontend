@@ -7,7 +7,7 @@ import {Route} from 'react-router-dom'
 import {fetchReadingLists} from '../actions/fetchReadingLists'
 import ReadingLists from '../components/ReadingLists'
 import ReadingListInput from '../components/ReadingListInput'
-
+import ReadingListShow from '../components/ReadingListShow'
 
 class ReadingListsContainer extends React.Component {
 
@@ -19,7 +19,8 @@ class ReadingListsContainer extends React.Component {
         return(
             <div>
                 <Route path='/reading_lists/new' component={ReadingListInput}/>
-                <Route exact path='/reading_lists' render={() => <ReadingLists reading_lists={this.props.reading_lists}/>} />
+                <Route path='/reading_lists/:id' render={(routerProps) => <ReadingListShow {...routerProps} reading_lists={this.props.reading_lists}/>} />
+                <Route exact path='/reading_lists' render={(routerProps) => <ReadingLists {...routerProps} reading_lists={this.props.reading_lists}/>} />
             </div>
         )
     }
