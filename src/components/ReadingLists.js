@@ -1,4 +1,5 @@
 import React from 'react'
+import ReadingListShow from './ReadingListShow'
 
 //gets RLs from RL container
 //functional component cause it just has list of reading lists; can't use render
@@ -8,7 +9,9 @@ const ReadingLists = (props) => {
 
     return (
         <div>
-            {props.reading_lists.map(reading_list => <li key={reading_list.id}>{reading_list.name} - {reading_list.subject} - {reading_list.description}</li>)}
+            {props.reading_lists.map(reading_list => 
+            <p key={reading_list.id}><ReadingListShow reading_list={reading_list}/></p>)}
+            
         </div>
     )
     
