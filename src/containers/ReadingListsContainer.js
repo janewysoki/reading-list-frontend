@@ -3,6 +3,7 @@
 //this is a top level component so we'd want to render it inside our App in App.js which is why we export it below
 import React from 'react'
 import {connect} from 'react-redux'
+import {Route} from 'react-router-dom'
 import {fetchReadingLists} from '../actions/fetchReadingLists'
 import ReadingLists from '../components/ReadingLists'
 import ReadingListInput from '../components/ReadingListInput'
@@ -17,8 +18,8 @@ class ReadingListsContainer extends React.Component {
     render() {
         return(
             <div>
-                <ReadingListInput/><br></br>
-                <ReadingLists reading_lists={this.props.reading_lists}/>
+                <Route path='/reading_lists/new' component={ReadingListInput}/>
+                <Route exact path='/reading_lists' render={() => <ReadingLists reading_lists={this.props.reading_lists}/>} />
             </div>
         )
     }
