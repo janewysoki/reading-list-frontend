@@ -6,7 +6,14 @@ class ReadingListInput extends React.Component {
     render() {
         return(
             <div>
-                ReadingListInput
+                <form>
+                    <label>Reading List Name: </label>
+                    <input type='text' placeholder='Name' /> <br/>
+                    <label>Subject:</label>
+                    <input type='text' placeholder='Subject' /> <br/>
+                    <label>Description:</label>
+                    <input type='text' placeholder='Description' />
+                </form>
             </div>
         )
     }

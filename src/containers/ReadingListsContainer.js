@@ -17,7 +17,7 @@ class ReadingListsContainer extends React.Component {
     render() {
         return(
             <div>
-                <ReadingListInput/>
+                <ReadingListInput/><br></br>
                 <ReadingLists reading_lists={this.props.reading_lists}/>
             </div>
         )

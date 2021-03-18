@@ -8,7 +8,7 @@ const ReadingLists = (props) => {
 
     return (
         <div>
-            {props.reading_lists.map(reading_list => <li>{reading_list.name} - {reading_list.subject} - {reading_list.description}</li>)}
+            {props.reading_lists.map(reading_list => <li key={reading_list.id}>{reading_list.name} - {reading_list.subject} - {reading_list.description}</li>)}
         </div>
     )
     
