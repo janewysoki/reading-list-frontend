@@ -1,5 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {addReadingList} from '../actions/addReadingList'
+
+
 //this is a class component because it's a form which has local state values
 class ReadingListInput extends React.Component {
     //this is local state not redux store
@@ -21,8 +24,10 @@ class ReadingListInput extends React.Component {
     }
 
     //this data, creating new RL, should go to our database and upadte redux store
-    handleSubmit = () => {
-        
+   //preventdefault so it doesn't rerender, without calling this we'd lose all our form data when it rerenders
+    handleSubmit = (event) => {
+        event.preventDefault() 
+        this.props.addReadingList(this.state)
     }
 
     render() {
@@ -42,4 +47,5 @@ class ReadingListInput extends React.Component {
     }
 }
 
-export default connect()(ReadingListInput);
+//this dpesn't care about what's in the store, just about adding to it
+export default connect(null, {addReadingList})(ReadingListInput);
