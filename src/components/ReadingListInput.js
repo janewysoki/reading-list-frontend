@@ -28,6 +28,12 @@ class ReadingListInput extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault() 
         this.props.addReadingList(this.state)
+        //this sets the form boxes back to their initial values so what you entered doesn't stay on the screen after submitting it
+        this.setState({
+            name: '', 
+            subject: '', 
+            description: ''
+        })
     }
 
     render() {
