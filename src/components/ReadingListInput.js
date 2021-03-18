@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {connect} from 'react-redux'
 //this is a class component because it's a form which has local state values
 class ReadingListInput extends React.Component {
     //this is local state not redux store
@@ -18,23 +18,28 @@ class ReadingListInput extends React.Component {
             //way to assign a key with a value that needs to be evaluated first
             [event.target.name]: event.target.value
         })
+    }
 
+    //this data, creating new RL, should go to our database and upadte redux store
+    handleSubmit = () => {
+        
     }
 
     render() {
         return(
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}> 
                     <label>Reading List Name: </label>
                     <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/> <br/>
                     <label>Subject:</label>
                     <input type='text' placeholder='Subject' value={this.state.subject} name="subject" onChange={this.handleChange}/> <br/>
                     <label>Description:</label>
-                    <input type='text' placeholder='Description' value={this.state.description} name="description" onChange={this.handleChange}/>
+                    <input type='text' placeholder='Description' value={this.state.description} name="description" onChange={this.handleChange}/> <br/>
+                    <input type='submit'/>
                 </form>
             </div>
         )
     }
 }
 
-export default ReadingListInput;
+export default connect()(ReadingListInput);
