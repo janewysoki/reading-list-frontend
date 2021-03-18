@@ -109,3 +109,16 @@ BooksContainer.js
             </div>
         )
     }
+
+    Books.js
+    const Books = (props) => {
+    return (
+        <div>
+  <!-- if props.books is not undefined, then iterate and print this list -->           {props.books && props.books.map(book =>
+                <p key={book.id}>{book.title} <br/>
+                By {book.author} <br/> 
+                Summary: {book.summary} <br/>
+                Comments: {book.comments} <br/></p>
+            )}
+        </div>
+    )

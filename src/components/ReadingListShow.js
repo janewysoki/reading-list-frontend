@@ -4,8 +4,8 @@ import BooksContainer from '../containers/BooksContainer'
 
 const ReadingListShow = (props) => {
 
-    let reading_list = props.reading_lists[props.match.params.id -1]
-    //let reading_list = props.reading_lists.filter(reading_list => reading_list.id == props.match.params.id)[0]
+    //let reading_list = props.reading_lists[props.match.params.id -1]
+    let reading_list = props.reading_lists.filter(reading_list => reading_list.id == props.match.params.id)[0]
     
     return (
         <div>
