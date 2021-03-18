@@ -8,9 +8,11 @@ const ReadingListShow = (props) => {
 
     return (
         <div>
-            Name: {reading_list ? reading_list.name : null} <br/>
-            Subject: {reading_list ? reading_list.subject : null} <br/>
-            Description: {reading_list ? reading_list.description : null} <br/>
+            <h3>
+                Name: {reading_list ? reading_list.name : null} <br/>
+                Subject: {reading_list ? reading_list.subject : null} <br/>
+                Description: {reading_list ? reading_list.description : null} <br/>
+            </h3>
         </div>
     )
 }

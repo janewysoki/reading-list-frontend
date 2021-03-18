@@ -93,3 +93,7 @@ ReactDOM.render(
     <App />
   </Router>
 </Provider>
+
+ReadingListContainer.js
+<!-- Switch in will choose first route that matches that path; 
+the order of the routes matters-->

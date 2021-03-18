@@ -21,7 +21,7 @@ class ReadingListsContainer extends React.Component {
                 <Switch>
                     <Route path='/reading_lists/new' component={ReadingListInput}/>
                     <Route path='/reading_lists/:id' render={(routerProps) => <ReadingListShow {...routerProps} reading_lists={this.props.reading_lists}/>} />
-                    <Route exact path='/reading_lists' render={(routerProps) => <ReadingLists {...routerProps} reading_lists={this.props.reading_lists}/>} />
+                    <Route path='/reading_lists' render={(routerProps) => <ReadingLists {...routerProps} reading_lists={this.props.reading_lists}/>} />
                 </Switch>
             </div>
         )
