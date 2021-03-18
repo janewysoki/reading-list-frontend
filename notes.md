@@ -69,3 +69,15 @@ fetchReadingLists.js
 since fetch request takes time, we can't return that action right away and we ont want our connect function to auto call dipatch for us. we instead use it inside our action creator so we can call dispatch ____;
 
 thunk allows us to use dispatch inside action creators
+
+
+
+readingLists.js
+const ReadingLists = (props) => {
+    return (
+        <div>
+            <!-- need props first because thats the info being passed from RL container to component of RLs -->
+            {props.reading_lists.map(reading_list => <li>{reading_list.name} {reading_list.subject} {reading_list.description}</li>)}
+        </div>
+    )
+}
