@@ -1,4 +1,6 @@
 import React from 'react'
+import {Redirect} from 'react-router-dom'
+
 
 const ReadingListShow = (props) => {
 
@@ -7,8 +9,8 @@ const ReadingListShow = (props) => {
     return (
         <div>
             Name: {reading_list ? reading_list.name : null} <br/>
-            {reading_list ? reading_list.subject : null} <br/>
-            {reading_list ? reading_list.description : null} <br/>
+            Subject: {reading_list ? reading_list.subject : null} <br/>
+            Description: {reading_list ? reading_list.description : null} <br/>
         </div>
     )
 }

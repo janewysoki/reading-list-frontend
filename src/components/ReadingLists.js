@@ -11,9 +11,9 @@ const ReadingLists = (props) => {
     return (
         <div>
             {props.reading_lists.map(reading_list => 
-            <div key={reading_list.id}>
-            <Link path={`/reading_lists/${reading_list.id}`}>{reading_list.name}</Link>
-            </div>)}
+            <li key={reading_list.id}>
+            <Link to={`/reading_lists/${reading_list.id}`}>{reading_list.name}</Link>
+            </li>)}
         </div>
     )
     
