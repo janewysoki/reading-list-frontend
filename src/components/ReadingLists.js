@@ -10,7 +10,7 @@ const ReadingLists = (props) => {
     return (
         <div>
             {props.reading_lists.map(reading_list => 
-            <p key={reading_list.id}><ReadingListShow reading_list={reading_list}/></p>)}
+            <div key={reading_list.id}><ReadingListShow reading_list={reading_list}/><br/></div>)}
             
         </div>
     )
