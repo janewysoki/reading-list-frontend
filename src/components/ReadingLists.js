@@ -1,4 +1,5 @@
 import React from 'react'
+import {Route, Link} from 'react-router-dom'
 import ReadingListShow from './ReadingListShow'
 
 //gets RLs from RL container
@@ -10,8 +11,9 @@ const ReadingLists = (props) => {
     return (
         <div>
             {props.reading_lists.map(reading_list => 
-            <div key={reading_list.id}><ReadingListShow reading_list={reading_list}/><br/></div>)}
-            
+            <div key={reading_list.id}>
+            <Link path={`/reading_lists/${reading_list.id}`}>{reading_list.name}</Link>
+            </div>)}
         </div>
     )
     
