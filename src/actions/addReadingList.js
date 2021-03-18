@@ -10,8 +10,9 @@ export const addReadingList = (data) => {
             },
             method: 'POST',
             body: JSON.stringify(data)
-
-        }) 
+        })
+        .then(response => response.json())
+        .then(reading_list => dispatch({type: 'ADD_READING_LIST', payload: reading_list}))
     }
 
 }
