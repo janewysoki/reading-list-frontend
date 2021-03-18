@@ -7,13 +7,13 @@ export default function readingListReducer(state = {reading_lists: []}, action) 
     switch (action.type) {
         case 'FETCH_READING_LISTS':
             return {reading_lists: action.payload}
+        case 'ADD_READING_LIST': 
+            return {...state, reading_lists: [...state.reading_lists, action.payload]}
         default:
             return state
     }
        
 
 
-
-    return state
 
 }
