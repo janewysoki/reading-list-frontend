@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import { addBook } from '../actions/addBook'
+import {addBook} from '../actions/addBook'
 
 
 class BookInput extends React.Component {

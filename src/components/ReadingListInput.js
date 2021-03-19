@@ -6,6 +6,7 @@ import {addReadingList} from '../actions/addReadingList'
 //this is a class component because it's a form which has local state values
 class ReadingListInput extends React.Component {
     //this is local state not redux store
+    //this state could be in a constructor too but not necessary
     state = {
         name: '', 
         subject: '', 

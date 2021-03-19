@@ -3,7 +3,6 @@
 //action gets sent to reducer from the actions folder
 //only using 1 reducer since every time we access book we do it through reading list
 export default function readingListReducer(state = {reading_lists: []}, action) {
-    debugger;
     switch (action.type) {
         case 'FETCH_READING_LISTS':
             return {reading_lists: action.payload}
