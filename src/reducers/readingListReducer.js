@@ -1,7 +1,7 @@
 //responsible for updating the parts of our store that has to do with reading lists
 //a reducer is takes in State and action object
 //action gets sent to reducer from the actions folder
-
+//only using 1 reducer since every time we access book we do it through reading list
 export default function readingListReducer(state = {reading_lists: []}, action) {
     
     switch (action.type) {

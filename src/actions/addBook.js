@@ -8,6 +8,11 @@ export const addBook = (book, readingListId) => {
             body: JSON.stringify(book)
         })
         .then(response => response.json())
-        .then(book =>dispatch({type: 'ADD_BOOK', payload: book}))
+        .then(reading_list => dispatch({type: 'ADD_BOOK', payload: reading_list}))
     }
 } 
+
+//so when you dispatch you want reading_list, not book, because book is nested with reading_list.
+//instead of sending back book, we send back reading_list that book is now associated with
+//so then this response will have that reading_list instead of just the book
+//we will then take that reading_list and dispatch it to our reducer
