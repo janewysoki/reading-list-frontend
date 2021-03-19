@@ -11,18 +11,30 @@ class BookInput extends React.Component {
         comments: ''
     }
     
+    handleChange = (event) => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+        
+
+    }
+
     render() {
         return (
             <div>
-               <form> 
+               <form onSubmit={this.handleSubmit}> 
                     <label>Title: </label>
-                    <input type='text' placeholder='Title' name="title" value={this.state.title}/> <br/>
+                    <input type='text' placeholder='Title' name="title" value={this.state.title} onChange={this.handleChange}/> <br/>
                     <label>Author:</label>
-                    <input type='text' placeholder='Author' name="author" value={this.state.author}/> <br/>
+                    <input type='text' placeholder='Author' name="author" value={this.state.author} onChange={this.handleChange}/> <br/>
                     <label>Summary:</label>
-                    <input type='text' placeholder='Summary' name="summary" value={this.state.summary}/> <br/>
+                    <input type='text' placeholder='Summary' name="summary" value={this.state.summary} onChange={this.handleChange}/> <br/>
                     <label>Comments:</label>
-                    <input type='text' placeholder='Comments' name="comments" value={this.state.comments}/> <br/>
+                    <input type='text' placeholder='Comments' name="comments" value={this.state.comments} onChange={this.handleChange}/> <br/>
                     <input type='submit'/>
                 </form>
             </div>

@@ -4,8 +4,7 @@ const Books = (props) => {
     return (
         <div>
             {props.books && props.books.map(book =>
-                <p key={book.id}>{book.title} <br/>
-                By {book.author} <br/> 
+                <p key={book.id}>{book.title} by {book.author} <br/> 
                 Summary: {book.summary} <br/>
                 Comments: {book.comments} <br/></p>
             )}
