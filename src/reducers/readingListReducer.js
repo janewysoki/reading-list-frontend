@@ -26,7 +26,7 @@ export default function readingListReducer(state = {reading_lists: []}, action) 
                     return reading_list
                 }
             })
-            return {...state, reading_lists: reading_lists}
+            return {...state, reading_lists: reading_lists_two}
         default:
             return state
     }
