@@ -44,4 +44,4 @@ class BookInput extends React.Component {
 }
 
 
-export default connect(null)(BookInput);
+export default connect(null, {addBook})(BookInput);

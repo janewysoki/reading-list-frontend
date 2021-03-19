@@ -9,6 +9,8 @@ export default function readingListReducer(state = {reading_lists: []}, action) 
             return {reading_lists: action.payload}
         case 'ADD_READING_LIST': 
             return {...state, reading_lists: [...state.reading_lists, action.payload]}
+        case 'ADD_BOOK':
+            return {}
         default:
             return state
     }
