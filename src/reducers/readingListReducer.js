@@ -3,19 +3,23 @@
 //action gets sent to reducer from the actions folder
 //only using 1 reducer since every time we access book we do it through reading list
 export default function readingListReducer(state = {reading_lists: []}, action) {
-    
+    debugger;
     switch (action.type) {
         case 'FETCH_READING_LISTS':
             return {reading_lists: action.payload}
         case 'ADD_READING_LIST': 
             return {...state, reading_lists: [...state.reading_lists, action.payload]}
         case 'ADD_BOOK':
-            return {}
+            //we want to return new array from RLs go through every RL, if RL id s not the same as RL coming in, we leave it, otherwise we wanna replace it with that Rl that's coming in
+            let reading_lists = state.reading_lists.map(reading_list => {
+                if (reading_list.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return reading_list
+                }
+            })
+            return {...state, reading_lists: reading_lists}
         default:
             return state
     }
-       
-
-
-
 }
