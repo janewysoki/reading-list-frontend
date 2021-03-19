@@ -20,8 +20,13 @@ class BookInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        //addBook(this.state, this.props.id)
-
+        this.props.addBook(this.state, this.props.id)
+        this.setState({
+            title: '', 
+            author: '', 
+            summary: '',
+            comments: ''
+        })
     }
 
     render() {
