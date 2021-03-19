@@ -4,6 +4,7 @@ import {deleteBook} from '../actions/deleteBook'
 
 const Books = (props) => {
 
+
     //because this is a functional component we need to define this with const
     const handleDelete = (book) => {
         //bceause this is a functional component, we use props.deletebook here instead of THIS.props.deleteBook
