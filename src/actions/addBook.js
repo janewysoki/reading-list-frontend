@@ -8,7 +8,13 @@ export const addBook = (book, readingListId) => {
             body: JSON.stringify(book)
         })
         .then(response => response.json())
-        .then(reading_list => dispatch({type: 'ADD_BOOK', payload: reading_list}))
+        .then(reading_list => {
+            if (reading_list.error) {
+                alert(reading_list.error)
+            } else {
+                dispatch({type: 'ADD_BOOK', payload: reading_list})
+            }
+        })      
     }
 } 
 

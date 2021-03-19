@@ -12,7 +12,13 @@ export const addReadingList = (data) => {
             body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(reading_list => dispatch({type: 'ADD_READING_LIST', payload: reading_list}))
+        .then(reading_list => {
+            if (reading_list.error) {
+                alert(reading_list.error)
+            } else {
+                dispatch({type: 'ADD_READING_LIST', payload: reading_list})
+            }
+        })
     }
-
 }
+
