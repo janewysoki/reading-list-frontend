@@ -18,6 +18,15 @@ export default function readingListReducer(state = {reading_lists: []}, action) 
                 }
             })
             return {...state, reading_lists: reading_lists}
+        case 'DELETE_BOOK':
+            let reading_lists_two = state.reading_lists.map(reading_list => {
+                if (reading_list.id === action.payload.id) {
+                    return action.payload
+                } else {
+                    return reading_list
+                }
+            })
+            return {...state, reading_lists: reading_lists}
         default:
             return state
     }
