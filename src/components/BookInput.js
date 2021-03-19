@@ -1,5 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import { addBook } from '../actions/addBook'
 
 
 class BookInput extends React.Component {
@@ -19,7 +20,7 @@ class BookInput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        
+        //addBook(this.state, this.props.id)
 
     }
 
