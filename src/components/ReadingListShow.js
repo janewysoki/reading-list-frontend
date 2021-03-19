@@ -1,5 +1,6 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'
+import ReadingListEdit from './ReadingListEdit'
 import BooksContainer from '../containers/BooksContainer'
 
 const ReadingListShow = (props) => {
@@ -15,6 +16,7 @@ const ReadingListShow = (props) => {
                 Description: {reading_list ? reading_list.description : null} <br/>
             </h3>
             <BooksContainer reading_list={reading_list}/>
+            <ReadingListEdit reading_list={reading_list}/>
         </div>
     )
 }
