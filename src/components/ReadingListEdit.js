@@ -2,8 +2,6 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {editReadingList} from '../actions/editReadingList'
 
-
-
 class ReadingListEdit extends React.Component {
     
     state = {
@@ -33,7 +31,9 @@ class ReadingListEdit extends React.Component {
         return(
             <div>
                 <form onSubmit={this.handleSubmit}> 
-                    <label>Reading List Name: </label>
+                    <br/><br/>
+                    <h3>EDIT READING LIST: </h3>
+                    <label>Name: </label>
                     <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/> <br/>
                     <label>Subject:</label>
                     <input type='text' placeholder='Subject' value={this.state.subject} name="subject" onChange={this.handleChange}/> <br/>

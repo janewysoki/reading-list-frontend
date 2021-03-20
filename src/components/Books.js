@@ -6,7 +6,6 @@ import BookShow from './BookShow'
 
 const Books = (props) => {
 
-
     //because this is a functional component we need to define this with const
     const handleDelete = (book) => {
         //bceause this is a functional component, we use props.deletebook here instead of THIS.props.deleteBook
@@ -17,9 +16,9 @@ const Books = (props) => {
         <div>
             {props.books && props.books.map(book =>
                 <p key={book.id}>
-                <Link to={`/reading_lists/books/${book.id}`}>
+                {/* <Link to={`/reading_lists/${reading_list.id}/books/${book.id}`}> */}
                     {book.title} by {book.author} <br/> 
-                </Link> 
+                {/* </Link>  */}
                 Summary: {book.summary} <br/>
                 Comments: {book.comments} <br/>
                 <button onClick={() => handleDelete(book)}>Delete Book</button> <br/></p>
@@ -28,6 +27,6 @@ const Books = (props) => {
     )
 }
 
-export default connect(null, {deleteBook})(Books);
+export default Books;
 
 

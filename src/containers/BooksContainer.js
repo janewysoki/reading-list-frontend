@@ -7,8 +7,8 @@ class BooksContainer extends React.Component {
     render() {
         return (
             <div>
-                <BookInput reading_list={this.props.reading_list}/>
                 <Books books={this.props.reading_list && this.props.reading_list.books}/>
+                <BookInput reading_list={this.props.reading_list}/>
             </div>
         )
     }

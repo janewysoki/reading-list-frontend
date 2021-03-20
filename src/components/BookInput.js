@@ -33,6 +33,8 @@ class BookInput extends React.Component {
         return (
             <div>
                <form onSubmit={this.handleSubmit}> 
+                    <br/>
+                    <h3>ADD BOOK:</h3>
                     <label>Title: </label>
                     <input type='text' placeholder='Title' name="title" value={this.state.title} onChange={this.handleChange}/> <br/>
                     <label>Author:</label>
