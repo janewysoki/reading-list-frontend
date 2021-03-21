@@ -32,16 +32,12 @@ class BookInput extends React.Component {
     render() {
         return (
             <div>
-               <form onSubmit={this.handleSubmit}> 
+               <form class="addform" onSubmit={this.handleSubmit}> 
                     <br/>
                     <h3>ADD BOOK:</h3>
-                    <label>Title: </label>
                     <input type='text' placeholder='Title' name="title" value={this.state.title} onChange={this.handleChange}/> <br/>
-                    <label>Author:</label>
                     <input type='text' placeholder='Author' name="author" value={this.state.author} onChange={this.handleChange}/> <br/>
-                    <label>Summary:</label>
                     <input type='text' placeholder='Summary' name="summary" value={this.state.summary} onChange={this.handleChange}/> <br/>
-                    <label>Comments:</label>
                     <input type='text' placeholder='Comments' name="comments" value={this.state.comments} onChange={this.handleChange}/> <br/>
                     <input class="button" type='submit'/>
                 </form>

@@ -9,12 +9,12 @@ const ReadingListShow = (props) => {
     
     return (
         <div>
-            <h3>
+            <h3 class="rlshowpage">
                 Name: {reading_list ? reading_list.name : null} <br/>
                 Subject: {reading_list ? reading_list.subject : null} <br/>
                 Description: {reading_list ? reading_list.description : null} <br/>
             </h3>
-            <BooksContainer reading_list={reading_list}/>
+            <p><BooksContainer reading_list={reading_list}/></p>
             <ReadingListEdit reading_list={reading_list}/>
         </div>
     )

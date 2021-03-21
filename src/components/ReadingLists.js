@@ -13,11 +13,13 @@ const ReadingLists = (props) => {
     }
 
     return (
-        <div>
+        <div class="readinglists">
             {props.reading_lists.map(reading_list => 
             <li key={reading_list.id}>
-            <Link to={`/reading_lists/${reading_list.id}`}>{reading_list.name }</Link>
-            <button class="button" onClick={() => handleDelete(reading_list)}>Delete</button>
+            <Link to={`/reading_lists/${reading_list.id}`}>{reading_list.name}       </Link>
+            <button class="button-rl" onClick={() => handleDelete(reading_list)}>Delete</button>
+            <br></br>
+            <br></br>
             </li>)}
         </div>
     )

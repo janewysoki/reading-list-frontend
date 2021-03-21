@@ -44,13 +44,11 @@ class ReadingListInput extends React.Component {
         return(
             <div>
                 <form onSubmit={this.handleSubmit}> 
-                    <label>Name: </label>
+                    <h3>Create a new Reading List below: </h3>
                     <input type='text' placeholder='Name' value={this.state.name} name="name" onChange={this.handleChange}/> <br/>
-                    <label>Subject:</label>
                     <input type='text' placeholder='Subject' value={this.state.subject} name="subject" onChange={this.handleChange}/> <br/>
-                    <label>Description:</label>
                     <input type='text' placeholder='Description' value={this.state.description} name="description" onChange={this.handleChange}/> <br/>
-                    <input class="button" type='submit'/>
+                    <input type='submit'/>
                 </form>
             </div>
         )

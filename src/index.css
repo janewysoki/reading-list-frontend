@@ -1,15 +1,135 @@
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-image: url("https://img.huffingtonpost.com/asset/5d6ff1882500005500034195.jpeg?ops=scalefit_720_noupscale&format=webp"); */
+}
+
 .button {
     cursor: pointer;
     border: 1px solid #1a202c;
-    padding: 8px;
-    min-width: 64px;
-   
+    padding: 3px;
+    min-width: 100px;
     background: transparent;
-   
     transition: all 0.1s ease-in;
 }
    
 .button:hover {
-    background: #1a202c;
+    background: #5f8be4;
     color: #ffffff;
 }
+
+.button-rl {
+    cursor: pointer;
+    border: 1px solid #1a202c;
+    padding: 1px;
+    min-width: 75px;
+    margin-left: 5px;
+    background: transparent;
+    transition: all 0.1s ease-in;
+}
+   
+.button-rl:hover {
+    background: #5f8be4;
+    color: #ffffff;
+}
+
+input[type=text], select {
+    width: 75%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  input[type=submit] {
+    width: 25%;
+    background-color: #5f8be4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #0a32e2;
+  }
+
+  form {
+    border-radius: 10px;
+    width: 65%;
+    background-color: #f2f2f2;
+    padding: 10px;
+    padding-top: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .addform {
+    /* background-image: url("https://img.huffingtonpost.com/asset/5d6ff1882500005500034195.jpeg?ops=scalefit_720_noupscale&format=webp"); */
+    border-radius: 10px;
+    width: 65%;
+    background-color: #bbd5ee;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .navbar {
+    background-color: rgb(248, 227, 223);
+    color: #f2f2f2;
+    list-style-type: none;
+    margin-left: auto;
+    margin-right: auto;
+    /* padding: 0; */
+    width: 100%;
+    text-align: center;
+    display: -moz-inline-grid;
+    /* overflow: auto; */
+  }
+  
+  .navbar:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .rlshowpage {
+    text-align: center;
+    border-radius: 10px;
+    width: 65%;
+    background-color: #f1d0f5;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rlshowpagebooks {
+    text-align: center;
+    border-radius: 10px;
+    width: 65%;
+    background-color: #e7d5af;
+    padding-top: 0px;
+    padding-bottom: 5px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .readinglists {
+    text-align: center;
+    list-style-type: none;
+    border-radius: 10px;
+    width: 65%;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
