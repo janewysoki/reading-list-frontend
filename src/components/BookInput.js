@@ -43,7 +43,7 @@ class BookInput extends React.Component {
                     <input type='text' placeholder='Summary' name="summary" value={this.state.summary} onChange={this.handleChange}/> <br/>
                     <label>Comments:</label>
                     <input type='text' placeholder='Comments' name="comments" value={this.state.comments} onChange={this.handleChange}/> <br/>
-                    <input type='submit'/>
+                    <input class="button" type='submit'/>
                 </form>
             </div>
         )

@@ -1,7 +1,6 @@
 import React from 'react'
-import {Route, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
-import ReadingListShow from './ReadingListShow'
 import {deleteReadingList} from '../actions/deleteReadingList'
 //gets RLs from RL container
 //functional component cause it just has list of reading lists; can't use render
@@ -17,10 +16,9 @@ const ReadingLists = (props) => {
         <div>
             {props.reading_lists.map(reading_list => 
             <li key={reading_list.id}>
-            <Link to={`/reading_lists/${reading_list.id}`}>{reading_list.name}</Link>
-            <button onClick={() => handleDelete(reading_list)}>Delete Reading List</button>
+            <Link to={`/reading_lists/${reading_list.id}`}>{reading_list.name }</Link>
+            <button class="button" onClick={() => handleDelete(reading_list)}>Delete</button>
             </li>)}
-            
         </div>
     )
     

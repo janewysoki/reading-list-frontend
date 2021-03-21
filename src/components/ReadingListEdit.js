@@ -39,7 +39,7 @@ class ReadingListEdit extends React.Component {
                     <input type='text' placeholder='Subject' value={this.state.subject} name="subject" onChange={this.handleChange}/> <br/>
                     <label>Description:</label>
                     <input type='text' placeholder='Description' value={this.state.description} name="description" onChange={this.handleChange}/> <br/>
-                    <input type='submit'/>
+                    <input class="button" type='submit'/>
                 </form>
             </div>
         )

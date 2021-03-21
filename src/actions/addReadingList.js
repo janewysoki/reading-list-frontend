@@ -3,7 +3,7 @@
 export const addReadingList = (data) => {
    //return dispatch so we have access to dispatch function from thunk
     return (dispatch) => {
-        fetch('http://localhost:3000/api/v1/reading_lists', {
+        return fetch('http://localhost:3000/api/v1/reading_lists', {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

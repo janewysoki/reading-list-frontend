@@ -37,12 +37,8 @@ export default function readingListReducer(state = {reading_lists: []}, action) 
             })
             return {...state, reading_lists: reading_lists_three}
         case 'DELETE_READING_LIST':
-            let reading_lists_four = state.reading_lists.map(reading_list => {
-                if (reading_list.id === action.payload.id) {
-                    return action.payload
-                } else {
-                    return reading_list
-                }
+            let reading_lists_four = state.reading_lists.filter(reading_list => {
+                return reading_list.id !== action.payload
             })
             return {...state, reading_lists: reading_lists_four}
         default:

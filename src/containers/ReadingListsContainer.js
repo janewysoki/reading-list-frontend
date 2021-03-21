@@ -8,8 +8,8 @@ import {fetchReadingLists} from '../actions/fetchReadingLists'
 import ReadingLists from '../components/ReadingLists'
 import ReadingListInput from '../components/ReadingListInput'
 import ReadingListShow from '../components/ReadingListShow'
-import BookShow from '../components/BookShow'
 import NavBar from '../components/NavBar'
+import Home from '../components/Home'
 
 class ReadingListsContainer extends React.Component {
 
@@ -25,7 +25,7 @@ class ReadingListsContainer extends React.Component {
                     <Route path='/reading_lists/new' component={ReadingListInput}/>
                     <Route path='/reading_lists/:id' render={(routerProps) => <ReadingListShow {...routerProps} reading_lists={this.props.reading_lists}/>} />
                     <Route path='/reading_lists' render={(routerProps) => <ReadingLists {...routerProps} reading_lists={this.props.reading_lists}/>} />
-                    {/* <Route path='/reading_lists/:id/books/:id' render={(routerProps) => <BookShow {...routerProps} reading_lists={this.props.reading_lists}/>} /> */}
+                    <Route path='/' component={Home}/>
                 </Switch>
             </div>
         )

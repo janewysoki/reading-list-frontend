@@ -1,7 +1,6 @@
 
 import React from 'react';
-import {connect} from 'react-redux'
-//import {fetchReadingLists} from './actions/fetchReadingLists'
+import './index.css';
 import ReadingListsContainer from './containers/ReadingListsContainer'
 
 class App extends React.Component {

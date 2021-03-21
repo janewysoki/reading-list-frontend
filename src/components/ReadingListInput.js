@@ -29,12 +29,15 @@ class ReadingListInput extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault() 
         this.props.addReadingList(this.state)
+        .then (() => this.props.history.push('/reading_lists'))
         //this sets the form boxes back to their initial values so what you entered doesn't stay on the screen after submitting it
-        this.setState({ //set state is async so you could put this between preventefault and this.props.addReadingList
-            name: '', 
-            subject: '', 
-            description: ''
-        })
+        
+        // this.setState({ //set state is async so you could put this between preventefault and this.props.addReadingList
+        //     name: '', 
+        //     subject: '', 
+        //     description: ''
+        // })
+
     }
 
     render() {
@@ -47,7 +50,7 @@ class ReadingListInput extends React.Component {
                     <input type='text' placeholder='Subject' value={this.state.subject} name="subject" onChange={this.handleChange}/> <br/>
                     <label>Description:</label>
                     <input type='text' placeholder='Description' value={this.state.description} name="description" onChange={this.handleChange}/> <br/>
-                    <input type='submit'/>
+                    <input class="button" type='submit'/>
                 </form>
             </div>
         )

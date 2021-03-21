@@ -1,5 +1,4 @@
 import React from 'react'
-import {Redirect} from 'react-router-dom'
 import ReadingListEdit from './ReadingListEdit'
 import BooksContainer from '../containers/BooksContainer'
 

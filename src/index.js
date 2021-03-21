@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'; //this wraps our app and gives it access
 import readingListReducer from './reducers/readingListReducer'
 import {BrowserRouter as Router} from 'react-router-dom'
 import App from './App';
+import './index.css';
 
 
 //this is basically saying compose enhances equals these dev tools or equals compose
