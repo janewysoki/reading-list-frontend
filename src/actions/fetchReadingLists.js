@@ -5,14 +5,15 @@
 
 //reading_lists below used to say data and could say data
 export function fetchReadingLists() {
-   return (dispatch) => {
+   return (dispatch) => 
       fetch('http://localhost:3000/api/v1/reading_lists') 
       .then(response => response.json()) 
-      .then (reading_lists => dispatch({
+      .then (reading_lists => 
+        
+            dispatch({
          type: 'FETCH_READING_LISTS',
          payload: reading_lists
       })) 
    }
    
 
-}

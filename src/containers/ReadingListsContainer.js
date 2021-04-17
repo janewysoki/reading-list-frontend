@@ -14,7 +14,9 @@ import Home from '../components/Home'
 class ReadingListsContainer extends React.Component {
 
     componentDidMount() {
+        
         this.props.fetchReadingLists()
+        
     }
  
     render() {
@@ -34,6 +36,7 @@ class ReadingListsContainer extends React.Component {
 }
 
 //state here is state from our redux store
+//receives state as first argument
 const mapStateToProps = state => {
     return {
         reading_lists: state.reading_lists
